@@ -1,0 +1,10 @@
+C:\Users\dkxce\source\repos\VolMuter\VolMuter\obj\Debug\VolMuter.csproj.AssemblyReference.cache
+C:\Users\dkxce\source\repos\VolMuter\VolMuter\obj\Debug\VolMuter.Properties.Resources.resources
+C:\Users\dkxce\source\repos\VolMuter\VolMuter\obj\Debug\VolMuter.csproj.GenerateResource.cache
+C:\Users\dkxce\source\repos\VolMuter\VolMuter\obj\Debug\VolMuter.csproj.CoreCompileInputs.cache
+C:\Users\dkxce\source\repos\VolMuter\VolMuter\bin\Debug\VolMuter.exe.config
+C:\Users\dkxce\source\repos\VolMuter\VolMuter\bin\Debug\VolMuter.exe
+C:\Users\dkxce\source\repos\VolMuter\VolMuter\bin\Debug\VolMuter.pdb
+C:\Users\dkxce\source\repos\VolMuter\VolMuter\obj\Debug\VolMuter.exe
+C:\Users\dkxce\source\repos\VolMuter\VolMuter\obj\Debug\VolMuter.pdb
+C:\Users\dkxce\source\repos\VolMuter\VolMuter\obj\Debug\VolMuter.VolForm.resources
