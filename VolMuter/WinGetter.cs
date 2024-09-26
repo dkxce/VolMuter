@@ -17,7 +17,6 @@ namespace VolMuter
 {
     public static class OpenWindowGetter
     {
-        /// <summary>Returns a dictionary that contains the handle and title of all the open windows.</summary>
         /// <returns>A dictionary that contains the handle and title of all the open windows.</returns>
         public static IDictionary<HWND, string> GetOpenWindows()
         {

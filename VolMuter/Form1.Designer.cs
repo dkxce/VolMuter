@@ -32,13 +32,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VolForm));
             this.VolNotifier = new System.Windows.Forms.NotifyIcon(this.components);
             this.VMMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.activeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lwitem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lpitem = new System.Windows.Forms.ToolStripMenuItem();
+            this.miActive = new System.Windows.Forms.ToolStripMenuItem();
+            this.miWindows = new System.Windows.Forms.ToolStripMenuItem();
+            this.miProcs = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.volMuterByDkxceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openSystemMixerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
+            this.openSystemSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.VMMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,58 +56,80 @@
             // VMMenu
             // 
             this.VMMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.activeToolStripMenuItem,
-            this.lwitem,
-            this.lpitem,
+            this.miActive,
+            this.miWindows,
+            this.miProcs,
             this.toolStripMenuItem1,
+            this.openSystemMixerToolStripMenuItem,
+            this.openSystemSettingsToolStripMenuItem,
+            this.toolStripMenuItem2,
             this.volMuterByDkxceToolStripMenuItem,
             this.toolStripMenuItem3,
             this.exitToolStripMenuItem});
             this.VMMenu.Name = "VMMenu";
-            this.VMMenu.Size = new System.Drawing.Size(173, 126);
+            this.VMMenu.Size = new System.Drawing.Size(190, 198);
             this.VMMenu.Opening += new System.ComponentModel.CancelEventHandler(this.VMMenu_Opening);
             // 
-            // activeToolStripMenuItem
+            // miActive
             // 
-            this.activeToolStripMenuItem.Name = "activeToolStripMenuItem";
-            this.activeToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
-            this.activeToolStripMenuItem.Text = "active";
+            this.miActive.Name = "miActive";
+            this.miActive.Size = new System.Drawing.Size(189, 22);
+            this.miActive.Text = "active";
             // 
-            // lwitem
+            // miWindows
             // 
-            this.lwitem.Name = "lwitem";
-            this.lwitem.Size = new System.Drawing.Size(172, 22);
-            this.lwitem.Text = "List Windows";
+            this.miWindows.Name = "miWindows";
+            this.miWindows.Size = new System.Drawing.Size(189, 22);
+            this.miWindows.Text = "List Windows";
             // 
-            // lpitem
+            // miProcs
             // 
-            this.lpitem.Name = "lpitem";
-            this.lpitem.Size = new System.Drawing.Size(172, 22);
-            this.lpitem.Text = "List Processes";
+            this.miProcs.Name = "miProcs";
+            this.miProcs.Size = new System.Drawing.Size(189, 22);
+            this.miProcs.Text = "List Processes";
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(169, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(186, 6);
             // 
             // volMuterByDkxceToolStripMenuItem
             // 
             this.volMuterByDkxceToolStripMenuItem.Name = "volMuterByDkxceToolStripMenuItem";
-            this.volMuterByDkxceToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.volMuterByDkxceToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.volMuterByDkxceToolStripMenuItem.Text = "VolMuter by dkxce";
             this.volMuterByDkxceToolStripMenuItem.Click += new System.EventHandler(this.volMuterByDkxceToolStripMenuItem_Click);
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(169, 6);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(186, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // openSystemMixerToolStripMenuItem
+            // 
+            this.openSystemMixerToolStripMenuItem.Name = "openSystemMixerToolStripMenuItem";
+            this.openSystemMixerToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.openSystemMixerToolStripMenuItem.Text = "Open System Mixer";
+            this.openSystemMixerToolStripMenuItem.Click += new System.EventHandler(this.openSystemMixerToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(186, 6);
+            // 
+            // openSystemSettingsToolStripMenuItem
+            // 
+            this.openSystemSettingsToolStripMenuItem.Name = "openSystemSettingsToolStripMenuItem";
+            this.openSystemSettingsToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.openSystemSettingsToolStripMenuItem.Text = "Open System Settings";
+            this.openSystemSettingsToolStripMenuItem.Click += new System.EventHandler(this.openSystemSettingsToolStripMenuItem_Click);
             // 
             // VolForm
             // 
@@ -132,11 +157,14 @@
         private System.Windows.Forms.ContextMenuStrip VMMenu;
         private System.Windows.Forms.ToolStripMenuItem volMuterByDkxceToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem activeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem miActive;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem lwitem;
-        private System.Windows.Forms.ToolStripMenuItem lpitem;
+        private System.Windows.Forms.ToolStripMenuItem miWindows;
+        private System.Windows.Forms.ToolStripMenuItem miProcs;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem openSystemMixerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem openSystemSettingsToolStripMenuItem;
     }
 }
 

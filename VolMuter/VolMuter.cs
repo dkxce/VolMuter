@@ -47,7 +47,7 @@ namespace VolMuter
         public static bool SetVolume(int vol_0_100, string ProcessExeName) => SetApplicationVolume(GetProcessByExe(ProcessExeName), (float)vol_0_100);
         #endregion Volume
 
-        #region process
+        #region Processes
         public static uint GetProcessByName(string ProcessName)
         {
             foreach (System.Diagnostics.Process proc in System.Diagnostics.Process.GetProcesses())
@@ -122,14 +122,13 @@ namespace VolMuter
             };
             return res;
         }
-        #endregion process        
+        #endregion Processes        
 
         #region GET
         public static float? GetApplicationVolume(uint procId)
         {
             ISimpleAudioVolume volume = GetVolumeObject(procId);
-            if (volume == null)
-                return null;
+            if (volume == null) return null;
 
             float level;
             volume.GetMasterVolume(out level);

@@ -1,7 +1,7 @@
 ﻿//
 // C#
 // VolMuter.MousePos
-// v 0.1, 25.09.2024
+// v 0.2, 25.09.2024
 // https://github.com/dkxce/VolMuter
 // en,ru,1251,utf-8
 //
@@ -14,7 +14,7 @@ namespace VolMuter
     public static class MousePos
     {
         [StructLayout(LayoutKind.Sequential)]
-        public struct POINT
+        private struct POINT
         {
             public int X;
             public int Y;
@@ -22,7 +22,7 @@ namespace VolMuter
         }
 
         [DllImport("user32.dll")]
-        public static extern bool GetCursorPos(out POINT lpPoint);
+        private static extern bool GetCursorPos(out POINT lpPoint);
 
         public static Point GetCursorPosition()
         {
